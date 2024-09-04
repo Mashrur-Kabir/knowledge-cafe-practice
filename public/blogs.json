@@ -6,7 +6,7 @@
         "author_name": "Sarah Connor",
         "author_img": "https://i.ibb.co/YZDM8Nr/vince-veras-AJIq-ZDAUD7-A-unsplash.jpg",
         "date_posted": "2024-08-15",
-        "reading_time": "7",
+        "reading_time": 7,
         "hashtags": ["AI", "MachineLearning", "FutureTech"]
     },
     {
@@ -16,7 +16,7 @@
         "author_name": "John Doe",
         "author_img": "https://i.ibb.co/cFLPykq/brooke-cagle-w-YQn-EAMAQk-unsplash.jpg",
         "date_posted": "2024-08-18",
-        "reading_time": "10",
+        "reading_time": 10,
         "hashtags": ["QuantumComputing", "TechTrends", "Innovation"]
     },
     {
@@ -26,7 +26,7 @@
         "author_name": "Emily Zhang",
         "author_img": "https://i.ibb.co/RQcPhjB/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg",
         "date_posted": "2024-08-20",
-        "reading_time": "8",
+        "reading_time": 8,
         "hashtags": ["5G", "IoT", "Connectivity"]
     },
     {
@@ -36,7 +36,7 @@
         "author_name": "Michael Smith",
         "author_img": "https://i.ibb.co/zSF0Z8Z/taylor-grote-rn-H5-ITof-DAM-unsplash.jpg",
         "date_posted": "2024-08-22",
-        "reading_time": "6",
+        "reading_time": 6,
         "hashtags": ["Programming", "Coding", "DeveloperTips"]
     },
     {
@@ -46,7 +46,7 @@
         "author_name": "Linda Johnson",
         "author_img": "https://i.ibb.co/c8V05R4/tamara-bellis-A3-Gd2b-98-g-unsplash.jpg",
         "date_posted": "2024-08-25",
-        "reading_time": "9",
+        "reading_time": 9,
         "hashtags": ["Cybersecurity", "DataProtection", "InfoSec"]
     }
 ]

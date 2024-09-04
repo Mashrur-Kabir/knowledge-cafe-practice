@@ -8,19 +8,27 @@ function App() {
 
   const [bookmarks, setBookmarks] = useState([]);
 
+  const [readingTime, setReadingTime] = useState(0);
+
+  // adding bookmarked blogs
   const handleAddToBookmarks = (blog) => { /* how will i drill the data obtained from here? yes, <blogs> -> <blog> . and the singular blog object will be received as parameter here*/
     const newBookmarks = [...bookmarks, blog];
     setBookmarks(newBookmarks); /* update the state with the new array of bookmarks */
   }
 
+  // calculating reading time
+  const handleTotalReadingTime = (time) => {
+    setReadingTime(readingTime + time); // update the state like this since its not an array
+  }
+
   return (
     <>
       <Header></Header>
-      <hr className='border-b-1 border-gray-300 mx-28 mb-8' />
+      <hr className='border-b-1 border-gray-300 max-w-7xl w-auto mx-auto mb-8'/>
       
-      <main className='flex max-w-7xl mx-auto'>
-        <Blogs handleAddToBookmarks={handleAddToBookmarks}></Blogs> {/* fn + f12 to go to component instantly */}
-        <Bookmarks bookmarks={bookmarks}></Bookmarks> {/* bookmark icon button will try to establish a connection from its component all the way to here. so we will try to add the event handler for prop drilling and update the state here to send it to bookmark as prop*/}
+      <main className='flex max-w-7xl mx-auto gap-6'>
+        <Blogs handleTotalReadingTime={handleTotalReadingTime} handleAddToBookmarks={handleAddToBookmarks}></Blogs> {/* fn + f12 to go to component instantly */}
+        <Bookmarks readingTime={readingTime} bookmarks={bookmarks}></Bookmarks> {/* bookmark icon button will try to establish a connection from its component all the way to here. so we will try to add the event handler for prop drilling and update the state here to send it to bookmark as prop*/}
       </main>
     </>
   )
