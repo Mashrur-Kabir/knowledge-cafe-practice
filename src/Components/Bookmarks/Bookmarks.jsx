@@ -10,7 +10,7 @@ const Bookmarks = ({bookmarks, readingTime}) => { /* we passed readingTime as a 
             <div className='p-7 bg-slate-300 rounded-lg'>
                 <h2 className="text-2xl font-bold text-left mb-4">Bookmarked blogs: {bookmarks.length}</h2>    
                     {
-                        bookmarks.map(bookmark => <Bookmark key={bookmark.id} bookmark={bookmark}></Bookmark> ) // mapping over each bookmark in the array and returning a div with its title as text.
+                        bookmarks.map((bookmark, idx) => <Bookmark key={idx} bookmark={bookmark}></Bookmark> ) // mapping over each bookmark in the array and returning a div with its title as text.
                     }
             </div>       
         </div>
@@ -23,3 +23,5 @@ Bookmarks.propTypes = {
 };
 
 export default Bookmarks;
+
+/* bookmark.id as key would duplicate here since we can add the same blog title multiple times */

@@ -17,8 +17,14 @@ function App() {
   }
 
   // calculating reading time
-  const handleTotalReadingTime = (time) => {
+  const handleTotalReadingTime = (time, id) => {
     setReadingTime(readingTime + time); // update the state like this since its not an array
+  
+    //remove the read blogs from Bookmarks (this is why the id parameter is called)
+    // how to do it? select all except the one you want to delete, then set the state again
+
+    const remaining = bookmarks.filter(bookmark => bookmark.id!== id); // wont select if matches
+    setBookmarks(remaining);
   }
 
   return (

@@ -4,7 +4,7 @@ import { IoBookmarks } from "react-icons/io5";
 
 const Blog = ({blog, handleAddToBookmarks, handleTotalReadingTime}) => { // singular object from blogs.json after .map and received handleAddToBookmarks from <Blogs>
 
-    const {blog_title, date_posted, cover_image, reading_time, hashtags, author_name, author_img} = blog; // destructuring.
+    const {id, blog_title, date_posted, cover_image, reading_time, hashtags, author_name, author_img} = blog; // destructuring.
 
     return (
         <div className='mb-14'>
@@ -29,7 +29,7 @@ const Blog = ({blog, handleAddToBookmarks, handleTotalReadingTime}) => { // sing
                     <span key={index} className='inline-block text-xl text-gray-500 mr-4'>#{hashtag}</span>
                 ))}
             </p>
-            <button onClick={() => handleTotalReadingTime(reading_time)} className='text-blue-600 underline underline-offset-2 hover:decoration-purple-600 hover:text-purple-600 hover:cursor-pointer font-semibold'>Mark As Read</button> {/* sending argument (reading_time) to app.jsx to add to event */}
+            <button onClick={() => handleTotalReadingTime(reading_time, id)} className='text-blue-600 underline underline-offset-2 hover:decoration-purple-600 hover:text-purple-600 hover:cursor-pointer font-semibold'>Mark As Read</button> {/* sending argument (reading_time) and (id) (id for deletion) to app.jsx to add to event */}
         </div>
 
     );
